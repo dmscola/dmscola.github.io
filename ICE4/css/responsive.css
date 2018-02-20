@@ -1,0 +1,11 @@
+@media only screen and (min-width: 600px)
+{
+  .top-nav ul li, .menu-icon{
+    display: inline-block;
+
+}
+  .top-nav ul, .menu-icon{
+    display: inline-block;
+    width: 100%
+}
+}
