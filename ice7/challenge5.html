@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Challenge 5</title>
 	<style>
@@ -37,8 +39,25 @@
 	</style>
 
 	<script type="text/javascript">
-	// I used Two functions here.  Starter idea at: 
+	// I used Two functions here.  Starter idea at:
 	// https://codepen.io/ColleenEMc/pen/XmZzWw
+	$(document).ready(function(){
+		$(".preview").on("mouseover focus",showImage);
+		$(".preview").on("mouseout blur", hideImage);
+	});
+
+
+	function hideImage(){
+		$("#image").css("background-image", "")
+		.text("Hover over an image below")
+	}
+
+	function showImage(){
+		$("#image").css("background-image", "url("+ this.src +")")
+		.text(this.alt);
+	}
+
+
 	</script>
 </head>
 
@@ -49,20 +68,20 @@
 		</div>
 
 		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-		<img class = "preview" 
-			alt = "Styling with a Bandana" 
+		<img class = "preview" tabindex = "0"
+			alt = "Styling with a Bandana"
 			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg";
 			>
 
 
-		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->	
-		<img class = "preview" 
-			alt = "With My Boy" 
-			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG";>
-	
 		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-		<img class = "preview" tabindex = "1" 
-			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
+		<img class = "preview" tabindex = "0"
+			alt = "With My Boy"
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG";>
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" tabindex = "0"
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg"
 			alt = "Young Puppy";>
 </body>
 </html>
