@@ -420,7 +420,24 @@ footer {
       width:85%;
     }
 
+    .domscola{
+      width:95%;
+      display: block;
+      padding: 10px;
+    }
 
+    h1{
+      width: auto;
+      text-align: center;
+    }
+
+    .roles{
+      width: auto;
+      padding-left: 10px;
+      display: block;
+      font-size: 14px;
+      text-align: center;
+    }
     .profpic{
           width: 75%;
           height: 75%;
