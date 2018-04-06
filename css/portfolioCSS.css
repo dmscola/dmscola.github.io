@@ -1,9 +1,109 @@
+* {
+    box-sizing: border-box;
+    font-family: Raleway, Arial;
+}
+
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.instructions{
+  display: none;
+}
+
+
+.active{
+  background-color: #799685;
+}
+
+.roles{
+  width:40%;
+  padding-left: 10px;
+  display: block;
+}
+
+h1 {
+    padding-left: 10px;
+    font-size: 50px;
+    word-break: break-all;
+    font-family:Raleway;
+}
+
+h2{
+  padding: 10px;
+  font-family:Raleway;
+}
+
+.contactblurb{
+  font-size: 20px;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+
+/* Create 3 equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+.content p{
+  font-size: 12px;
+}
+
+.blurb{
+  color: #6d917b;
+  padding:10px;
+  margin:10px;
+}
+
+.domscola{
+  width:50%;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.title{
+  margin: 0;
+  padding-left: 0;
+}
+
+.profpic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: 25%;
+}
+
 /* Style the navbar */
 #navbar {
-  background: #4e54c8;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #4e54c8;  /* fallback*/
+  background-image: url("../img/home-background.jpg");
   overflow: hidden;
 }
 
@@ -11,25 +111,211 @@
 #navbar a {
   float: left;
   display: block;
-  color:  #c8c64e;
+  color:  black;
   text-align: center;
-  padding: 14px;
+  padding: 30px;
   text-decoration: none;
+  font-size: 20px;
 }
 
-/* Page content */
-.content {
-  padding: 16px;
+#navbar a:hover {
+    color: #aa383a;
+    transition: 0.4s;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
+@import "compass/css3";
+
+footer {
+  width: 100%;
+  display: inline-block;
+  margin: 2em 0;
+  height: 50px;
+  background-color: #799685;
+}
+  .infobar {
+    width: 50%;
+    float: left;
+}
+  .infobar p {
+      padding-left: 10%;
+      color: white;
+      font-size: 1;
+      line-height: 50px;
+
+    }
+  .social {
+      width: 50%;
+      float: right;
+    }
+     .social a {
+      float: left;
+      line-height: 50px;
+      text-decoration: none;
+      color: white;
+      text-align: center;
+    }
+ .social a:hover {
+         background-color: #aa383a;
+         transition: 0.4s;
+       }
+
+
+.linked {
+  background-color: #1E83AE;
+  font-size: 1;
+  width: 33.33%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+.git {
+  background-color: black;
+  font-size: 1;
+  width: 33.33%;
+}
+
+.tweet {
+  background-color: #3DACDD;
+  font-size: 1;
+  width: 33.33%;
+}
+
+.contactcard {
+  font-family: Oswald, Arial;
+  justify:center;
+  position: relative;
+  width: 50%;
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.contactcard * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.contactcard .profile-image {
+  display: inline-block;
+  width: 70%;
+  position: relative;
+  padding: 20px;
+  border: 4px solid #799685;
+}
+
+.contactcard .profile-image img {
+  width:100%;
+}
+
+.contactcard figcaption {
+  width: 100%;
+  background-color: #799685;
+  color: black;
+  padding: 125px 25px 25px;
+  margin-top: -100px;
+  display: inline-block;
+  font-family: Oswald;
+  text-transform:uppercase;
+}
+
+.icons{
+text-align:center;
+width: 50%
+}
+
+
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+
+    #navbar a {
+      width: 25%;
+      float: center;
+      display: block;
+      color:  black;
+      text-align: center;
+      padding: 25px;
+      text-decoration: none;
+    }
+
+    h1{
+      font-size: 36px;
+    }
+
+    .blurb{
+      width:80%;
+    }
+
+    .profpic{
+      width: 50%;
+      height: 50%;
+    }
+
+    .contactcard .profile-image {
+      display: inline-block;
+      width: 75%;}
+
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    #navbar a {
+      width: 25%;
+      display: block;
+      color:  black;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    h1{
+      font-size: 32px;
+    }
+    .infobar{
+      width:100%;
+    }
+
+    .infobar p {
+      text-align: center;
+      padding: 0;
+
+    }
+
+
+
+    .roles{
+      font-size: 10px;
+    }
+
+    .social{
+      width: 100%;
+    }
+
+    .contactcard .profile-image {
+      display: inline-block;
+      width: 100%;}
+
+    .blurb{
+      width:85%;
+    }
+
+
+    .profpic{
+          width: 75%;
+          height: 75%;
+        }
 }
