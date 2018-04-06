@@ -5,6 +5,7 @@
     <title>Dom Scola Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/portfolioCSS.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <nav>
@@ -28,13 +29,91 @@
 
 <body>
 
-  
+  <div class = "main">
+
+  <div class = "intro">
+  <a href="dom_scola_resume.pdf" download>Download PDF version of my Resume</a>
+  <p>Feel free to explore my resume and educational experiences as well as skills that I have picked up along the way. Click a panel to expand or collapse the menu. </p>
+</div>
+
+
+  <button class="accordion">Work Experience</button>
+    <div class="panel">
+    <button class="accordion">Heiden Technology Solutions - Tier 1 Technician</button>
+    <div class="panel">
+      <p class = "date"> OCTOBER 2015-SEPTEMBER 2017 </p>
+      <p>Started as a student intern and promoted in December 2015. Provided tech support and expertise to various clients
+including hospitals, health care centers and small businesses. Examined and accessed the IT needs of clients and
+provided recommendations to solve technology related issues. Built and configured new PCs and repaired broken PCs.
+Fixed issues with electronic health record software CPSI/Evident including installation, debugging, and maintaining
+current user base. Designed and implemented a set of internal checklists for technicians and engineers to use.</p>
+</div>
+    <button class="accordion">SVSU Usability Research Team - Student Intern </button>
+    <div class="panel">
+      <p class = "date"> SEPTEMBER 2016-SEPTEMBER 2017 </p>
+      <p>Started as team member and promoted to intern. Planned, coordinated, and completed usability tests on businesses
+surrounding the SVSU campus. Collaborated with professors and students to design tests of software and web sites to
+gain information about user habits, behaviors, and motivations. Gathered test subjects and conducted tests using
+usability software including Silverback and TechSmith Morae. Wrote usability reports and presented findings, feedback
+and recommendations to clients. </p>
+</div>
+    <button class="accordion">Goodrich Quality Theaters - Shift Manager</button>
+    <div class="panel">
+      <p class = "date"> JANUARY – OCTOBER 2015 </p>
+      <p>Worked as a shift manager at the Quality 10 GDX. Regularly supervised employees and directed daily operations of the
+building. Handled all daily monetary activities including counting cash registers and making nightly bank deposits.
+Assisted patrons with questions, concerns, or issues. Motivated staff members to complete tasks quickly and trained
+new staff members on skills needed to perform their duties. Performed maintenance and repairs throughout the
+building and on equipment. Programmed and scheduled movie projectors to play without issues or delays. </p>
+</div>
+</div>
+
+  <button class="accordion">Skills</button>
+  <div class="panel">
+    <ul>
+      <li>Programming - Python, HTML, CSS, PHP, SQL, C++</li>
+      <li>UX Design</li>
+      <li>Usability Testing</li>
+      <li>Prototyping</li>
+      <li>Web Design</li>
+    </ul>
+</div>
+
+    <button class="accordion">Education</button>
+    <div class="panel">
+    <button class="accordion">University of Michigan</button>
+    <div class="panel">
+      <p class = "date"> AUGUST 2017-PRESENT </p>
+      <p><span>Degree Pursued:</span> Master of Science in Information (MSI)</p>
+      <p><span>Specialization:</span> Human-Computer Interaction/UX Research and Design</p>
+      <p><span>GPA:</span> 4.00</p>
+</div>
+    <button class="accordion">Saginaw Valley State University </button>
+    <div class="panel">
+      <p class = "date"> SEPTEMBER 2015- AUGUST 2017</p>
+      <p><span>Degree:</span> B.A. in Professional and Technical Writing. Minor: Computer Information Systems</p>
+      <p><span>Honors:</span> Dean’s list: Fall 2015, Winter 2016, Fall 2016, Winter 2017</p>
+      <p><span>GPA:</span> 3.96</p>
+</div>
+    <button class="accordion">Delta College</button>
+    <div class="panel">
+      <p class = "date"> JANUARY – OCTOBER 2015 </p>
+      <p><span>Major:</span>Computer Science and Technology</p>
+      <p><span>Honors:</span>Delta College President’s List: Spring 2014 and Winter 2015, Vice President’s List: Fall 2014</p>
+      <p><span>GPA:</span> 3.76</p></div>
+</div>
+
+
+</div>
+
+
+
 </body>
 
 
 <footer>
   <div class="infobar">
-    <p>Created by: Dom Scola - University of Michigan MSI '19</p>
+    <p>Created by: Dom Scola - 2018</p>
   </div>
 
   <div class="social">
@@ -43,4 +122,22 @@
     <a href="https://github.com/dmscola/"class="git">Github</a>
 
   </div>
+
+<script>
+var panels = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < panels.length; i++) {
+  panels[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = (panel.scrollHeight *10) + "px";
+    }
+  }
+}
+</script>
+
 </footer>
