@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Exam Two</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     </head>
@@ -11,9 +12,33 @@
         <h1>Dominic Scola</h1>
 
 
-<script>
-$(document).ready(function() {
+<div class="flex-container">
 
+        <img id = "pic1" src = "images/examPic.JPG" alt = "Picture one, an alligator eating a person?">
+
+          <img id ="pic2" src="images/UMSI-logo.jpg" alt = "Picture two, the UMSI logo">
+
+</div>
+
+<button id = "hide">Hide Image</button>
+<button id ="show">Show Image</button>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#pic1").hide();
+        $("#pic2").css("display", "block");
+        $("#pic2").css("margin-left", "auto");
+        $("#pic2").css("margin-right", "auto");
+
+    });
+    $("#show").click(function(){
+        $("#pic1").show();
+    });
 });
 </script>
     </body>
